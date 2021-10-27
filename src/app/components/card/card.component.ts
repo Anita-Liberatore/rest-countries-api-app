@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-import { CountriesService } from 'src/app/countries.service'
-import { Country } from 'src/app/country';
+import { CountriesService } from 'src/app/service/card-countries-service/countries.service'
 
 @Component({
   selector: 'app-card',
@@ -15,21 +13,18 @@ export class CardComponent implements OnInit {
 
   item = ['Population', 'Region', 'Capital']
 
-  countries: Country[] = [];
+
+  countriesFromRestApi: any;
 
   ngOnInit(): void {
+    this.loadCountries();
+  }
 
-    this.http.get<any>('https://restcountries.com/v3.1/all').subscribe(data => {
-      data.forEach((i: any) =>
-
-        this.countries.push({
-          name: i.name.common,
-          flagPhoto: i.flags.png
-        })
-
-      )
-        console.log(this.countries)
-
-    })
+  loadCountries() {
+    this.api
+      .getData().subscribe((countries: any) => {
+        this.countriesFromRestApi = countries
+        console.log(this.countriesFromRestApi)
+      });
   }
 }

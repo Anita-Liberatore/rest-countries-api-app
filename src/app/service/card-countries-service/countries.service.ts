@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Country } from './country';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,5 +15,4 @@ export class CountriesService {
   getData() {
     return this.http.get(this.localUrl);
   }
-  
 }
