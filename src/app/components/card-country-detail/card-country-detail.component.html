@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 
-<div class="container">
+<div class="container p-5">
     <div class="row">
         <div class="col-md-6">
             <div class="card" style="width: 18rem;">
@@ -10,10 +10,25 @@
 
         <div class="col-md-6">
             <div class="card">
+                <div>
                     <h4>{{obj.name.common}}</h4>
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="card-text"><b>Native Name:</b> {{obj.name.nativeName.msa.common}} </p>
+                        <p class="card-text"><b>Population:</b> {{population}} </p>
+                        <p class="card-text"><b>Region:</b> {{obj.region}} </p>
+                        <p class="card-text"><b>Sub Region:</b> {{obj.subregion}} </p>
+                        <p class="card-text"><b>Capital:</b> {{obj.capital}} </p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <p class="card-text"><b>Top Level Domain:</b> {{obj.tld}} </p>
+                        <p class="card-text"><b>Currencies:</b> {{obj.currencies[0].name}} </p>
+                        <p class="card-text"><b>Languages:</b> {{obj.region}} </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -13,6 +13,8 @@ export class CardCountryDetailComponent implements OnInit {
 
   obj: any;
 
+  population: String = ''
+
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -20,6 +22,7 @@ export class CardCountryDetailComponent implements OnInit {
     this.obj = JSON.parse(this.elem);
 
   
+    this.population = this.obj.population;
     console.log(this.obj);
 
   
