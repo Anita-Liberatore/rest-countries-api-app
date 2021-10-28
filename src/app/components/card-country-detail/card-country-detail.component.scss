@@ -1,15 +1,25 @@
 .card-img-top {
-    width: 440px;
-    height: 315px;
+    width: 535px;
+    height: 390px;
 }
 
 .container {
-    margin: 119px 48px 0px 78px;
+    margin-top: 100px;
 }
 
 .card {
     border: none;
 
+}
+
+.chips {
+    margin-top: 50px;
+    font-size: 16px;
+}
+
+.text-dark {
+    font-size: 16px;
+    border: 1px solid #dbd7d7;
 }
 
 p {

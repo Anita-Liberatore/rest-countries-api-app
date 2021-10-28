@@ -11,10 +11,7 @@ export class CardComponent implements OnInit {
 
   constructor(private api: CountriesService, private router: Router) { }
 
-  item = ['Population', 'Region', 'Capital']
-
   countriesFromRestApi: any;
-
   searchCountry: any;
 
   ngOnInit(): void {
@@ -30,6 +27,5 @@ export class CardComponent implements OnInit {
 
   onPress(i: any) {
     this.router.navigate(['/prova', {data:JSON.stringify(i)}]);
-    
   }
 }

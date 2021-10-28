@@ -10,7 +10,9 @@
                 <div class="card-body">
                     <h5 class="card-title">{{country.name.common}}</h5>
                     <div class="card-item">
-                        <p class="p-item" *ngFor="let i of item"><b>{{i}}:</b> 15 July</p>
+                        <p class="p-item"><b>Population:</b> {{country.population | number: '.2'}}</p>
+                        <p class="p-item"><b>Region:</b> {{country.region}}</p>
+                        <p class="p-item"><b>Capital:</b> {{country.capital}}</p>
                     </div>
 
                 </div>
