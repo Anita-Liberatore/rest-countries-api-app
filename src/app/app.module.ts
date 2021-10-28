@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CardComponent } from './components/card/card.component';
 import { SearchComponent } from './components/search/search.component';
 import { CardCountryDetailComponent } from './components/card-country-detail/card-country-detail.component';
+import { FilterComponent } from './components/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CardCountryDetailComponent } from './components/card-country-detail/car
     NavbarComponent,
     CardComponent,
     SearchComponent,
-    CardCountryDetailComponent
+    CardCountryDetailComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
