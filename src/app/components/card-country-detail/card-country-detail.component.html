@@ -1,6 +1,16 @@
 <app-navbar></app-navbar>
-
 <div class="container p-5">
+
+    <div class="input-group">
+        <div class="input-group-text">
+            <i class="fas fa-search"></i>
+        </div>
+        <button type="button" class="btn btn-light">Light</button>
+    </div>
+
+
+
+
     <div class="row">
         <div class="col-md-6">
             <div class="card" style="width: 18rem;">
@@ -16,17 +26,17 @@
 
                 <div class="row">
                     <div class="col-md-6">
-                        <p class="card-text"><b>Native Name:</b> {{objCountryName[0].nativeName}} </p>
+                        <p class="card-text"><b>Native Name:</b> {{obj.name.official}} </p>
                         <p class="card-text"><b>Population:</b> {{population}}</p>
-                        <p class="card-text"><b>Region:</b> {{objCountryName[0].region}} </p>
-                        <p class="card-text"><b>Sub Region:</b> {{objCountryName[0].subregion}}</p>
-                        <p class="card-text"><b>Capital:</b> {{objCountryName[0].capital}} </p>
+                        <p class="card-text"><b>Region:</b> {{obj.region}} </p>
+                        <p class="card-text"><b>Sub Region:</b> {{obj.subregion}} </p>
+                        <p class="card-text"><b>Capital:</b> {{obj.capital}}</p>
                     </div>
 
                     <div class="col-md-6">
-                        <p class="card-text"><b>Top Level Domain:</b> {{objCountryName[0].topLevelDomain}} </p>
-                        <p class="card-text"><b>Currencies:</b> {{objCountryName[0].currencies[0].name}} </p>
-                        <p class="card-text"><b>Languages:</b> {{objCountryName[0].languages[0].name}} </p>
+                        <p class="card-text"><b>Top Level Domain:</b> {{obj.tld}} </p>
+                        <p class="card-text"><b>Currencies:</b> </p>
+                        <p class="card-text"><b>Languages:</b> </p>
                     </div>
                 </div>
 

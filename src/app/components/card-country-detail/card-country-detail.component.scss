@@ -26,3 +26,17 @@ p {
     margin-top: 16px;
     margin-bottom: -8px;
 }
+
+@media screen and (max-width: 600px) {
+    .card-img-top {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .card-img-top {
+        width: auto;
+        height: auto;
+    }
+  }

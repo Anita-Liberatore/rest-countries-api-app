@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import { Component, OnInit, ɵɵclassMapInterpolate1 } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
 import { CountriesService } from 'src/app/service/card-countries-service/countries.service';
 
 
@@ -12,8 +12,9 @@ export class CardCountryDetailComponent implements OnInit {
 
   elem: any;
   obj: any;
-  objCountryName: any;
   population: String = ''
+
+  currenciesValues: String = ''
 
   constructor(private route: ActivatedRoute, private api: CountriesService) { }
 
@@ -21,13 +22,18 @@ export class CardCountryDetailComponent implements OnInit {
     this.elem = this.route.snapshot.paramMap.get("data");
     this.obj = JSON.parse(this.elem);
     this.population = this.obj.population.toLocaleString('de-DE');
-    this.getCountryName(this.obj.name.common);
-  }
-  
+ 
+    this.loadCurrencies()
 
-  getCountryName(countryName: string) {
-    this.api.getCountry(countryName).subscribe((country: any) => {
-        this.objCountryName = country
-      });
+  }
+
+
+
+  loadCurrencies() {
+    for (let key of Object.keys(this.obj.currencies)) {
+      let keyValue = this.obj.currencies[key]; 
+    }
   }
 }
+
+
