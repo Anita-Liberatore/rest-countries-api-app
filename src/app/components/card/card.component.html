@@ -1,8 +1,8 @@
 <app-navbar></app-navbar>
-<div class="container ">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-4">
-            <div class="container search-input p-3">
+            <div class="container search-input">
                 <div class="input-group">
                     <div class="input-group-text">
                         <i class="fas fa-search"></i>
@@ -13,12 +13,12 @@
             </div>
         </div>
     </div>
-</div>
-<div class="container">
+</div> 
+<div class="container-fluid p-5">
     <div class="row">
-        <div class="col-md-2  col-12 m-5" *ngFor="let country of countriesFromRestApi">
+        <div class="col-md-3" *ngFor="let country of countriesFromRestApi">
             <div class="card" (click)="onPress(country)">
-                <img class="card-img-top" src="{{ country.flags.png }}" alt="Countries photo">
+                <img class="card-img-top" src="{{ country.flags.png }}" alt="Country photo">
                 <div class="card-body">
                     <h5 class="card-title">{{country.name.common != null ? country.name.common : country.name}}</h5>
                     <div class="card-item">

@@ -3,18 +3,11 @@
     margin-left: 35px;
 }
 
-.dark-mode-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-
-.dark-mode {
+.navbar-nav {
    color: black;
    text-decoration: none;
    font-size: 15px;
-   font-weight: 600;
+   font-weight: 700;
    margin-right: 35px;
 } 
 
@@ -24,3 +17,14 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+
+@media all and (max-width: 370px) { 
+    .navbar-light .navbar-brand {
+        font-weight: bold;
+        font-size: initial;
+        margin-left: 10px;
+    }
+ }
+
+ 

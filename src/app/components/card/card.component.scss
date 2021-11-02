@@ -14,16 +14,18 @@
     padding: 5px 0;
 }
 
+.col-md-3 {
+    margin-bottom: 60px;
+}
+
 .card {
-    width: 148%;
     box-shadow: inset 0 0em 0em rgb(0 0 0 / 10%), 0 0 0 0px white, 0.3em 0.3em 1em rgb(0 0 0 / 30%);
     cursor: pointer;
 }
 
 .card-img-top {
     width: 100%;
-    height: 9vw;
-    object-fit: cover;
+    height: 230px;
 }
 
 .app-filter {
@@ -41,12 +43,29 @@
 
 .form-control {
     border-left: none;
-}
+} 
 
 .input-group {
-    box-shadow: inset 0 0em 0em rgb(0 0 0 / 10%), 0 0 0 0px white, 0.3em 0.3em 1em rgb(0 0 0 / 30%);
+    box-shadow: inset 0em 0em 0em rgb(0 0 0 / 10%), 0px 0px 0px 0px white, 0.3em 0.3em 1em rgb(0 0 0 / 30%);
 }
 
 .input-group-text {
     background-color: white;
 }
+
+.form-control {
+    padding: 11px;
+}
+
+
+@media all and (max-width: 546px) { 
+    .card-img-top {
+        width: 100%;
+        height: 156px;
+    }
+
+    .card {
+        margin-bottom: 50px;
+    }
+ }
+
