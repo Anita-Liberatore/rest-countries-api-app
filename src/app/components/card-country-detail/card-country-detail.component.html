@@ -21,12 +21,12 @@
         <div class="col-md-6">
             <div class="card">
                 <div>
-                    <h4><b>{{obj.name.common}}</b></h4>
+                    <h4><b>{{obj.name.common != null ? obj.name.common : obj.name}}</b></h4>
                 </div>
 
                 <div class="row">
                     <div class="col-md-6">
-                        <p class="card-text"><b>Native Name:</b> {{obj.name.official}} </p>
+                        <p class="card-text"><b>Native Name:</b> {{obj.name.official != null ? obj.name.official : obj.nativeName}} </p>
                         <p class="card-text"><b>Population:</b> {{population}}</p>
                         <p class="card-text"><b>Region:</b> {{obj.region}} </p>
                         <p class="card-text"><b>Sub Region:</b> {{obj.subregion}} </p>
@@ -34,7 +34,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <p class="card-text"><b>Top Level Domain:</b> {{obj.tld}} </p>
+                        <p class="card-text"><b>Top Level Domain:</b> {{obj.tld != null ? obj.tld : obj.topLevelDomain[0]}} </p>
                         <p class="card-text"><b>Currencies:</b> </p>
                         <p class="card-text"><b>Languages:</b> </p>
                     </div>

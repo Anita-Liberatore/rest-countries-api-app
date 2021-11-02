@@ -13,6 +13,7 @@ export class CardComponent implements OnInit {
 
   countriesFromRestApi: any;
   searchCountry: any;
+  country: string = '';
 
   ngOnInit(): void {
     this.loadCountries();
@@ -22,6 +23,26 @@ export class CardComponent implements OnInit {
     this.api
       .getData().subscribe((countries: any) => {
         this.countriesFromRestApi = countries
+      });
+  }
+
+  onKey(event: any) {
+
+    if(event.target.value.length < 1) {
+      return this.loadCountries();
+    }
+
+    this.country = event.target.value;
+    console.log(this.country)
+
+    this.getCountryInputSearch(this.country)
+  }
+
+
+  getCountryInputSearch(countryParam: string) {
+    this.api.getCountry(countryParam).subscribe((countries: any) => {
+        this.countriesFromRestApi = countries
+        console.log(this.countriesFromRestApi)
       });
   }
 

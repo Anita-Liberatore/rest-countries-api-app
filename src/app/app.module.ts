@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CardComponent } from './components/card/card.component';
-import { SearchComponent } from './components/search/search.component';
 import { CardCountryDetailComponent } from './components/card-country-detail/card-country-detail.component';
 import { FilterComponent } from './components/filter/filter.component';
 
@@ -15,14 +14,14 @@ import { FilterComponent } from './components/filter/filter.component';
     AppComponent,
     NavbarComponent,
     CardComponent,
-    SearchComponent,
     CardCountryDetailComponent,
     FilterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
