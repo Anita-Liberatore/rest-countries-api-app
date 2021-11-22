@@ -1,35 +1,36 @@
 <app-navbar></app-navbar>
-<div class="container-fluid">
+
+<div class="container-card">
     <div class="row">
-        <div class="col-md-4">
-            <div class="container search-input">
+        <div class="col-md-3">
+            <div class="search-button">
                 <div class="input-group">
                     <div class="input-group-text">
                         <i class="fas fa-search"></i>
                     </div>
-                    <input type="text" class="form-control" (keyup)="onKey($event)"
+                    <input type="text" class="form-control" [(ngModel)]="searchCountry"
                         placeholder="Search for a country...">
                 </div>
             </div>
         </div>
     </div>
-</div> 
-<div class="container-fluid p-5">
-    <div class="row">
-        <div class="col-md-3" *ngFor="let country of countriesFromRestApi">
-            <div class="card" (click)="onPress(country)">
-                <img class="card-img-top" src="{{ country.flags.png }}" alt="Country photo">
-                <div class="card-body">
-                    <h5 class="card-title">{{country.name.common != null ? country.name.common : country.name}}</h5>
-                    <div class="card-item">
-                        <p class="p-item"><b>Population:</b> {{country.population | number: '.2'}}</p>
-                        <p class="p-item"><b>Region:</b> {{country.region}}</p>
-                        <p class="p-item"><b>Capital:</b> {{country.capital}}</p>
-                    </div>
 
+    <div class="card" *ngFor="let country of countriesFromRestApi | filter:searchCountry">
+        <div class="card-img" style="background-image:url({{country.flags.png}});">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <a class="hover" (click)="onPress(country)">View Country</a>
                 </div>
             </div>
         </div>
 
+        <div class="card-content">
+            <a href="#!">
+                <h6 class="title-country">{{country.name.common}}</h6>
+                <p class="p-item"><b>Population:</b> {{country.population | number: '.2'}}</p>
+                <p class="p-item"><b>Region:</b> {{country.region}}</p>
+                <p class="p-item"><b>Capital:</b> {{country.capital}}</p>
+            </a>
+        </div>
     </div>
 </div>

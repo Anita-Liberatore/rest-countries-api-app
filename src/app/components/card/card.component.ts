@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Country } from 'src/app/model/country';
 import { CountriesService } from 'src/app/service/card-countries-service/countries.service'
 
 @Component({
@@ -12,8 +13,7 @@ export class CardComponent implements OnInit {
   constructor(private api: CountriesService, private router: Router) { }
 
   countriesFromRestApi: any;
-  searchCountry: any;
-  country: string = '';
+  searchCountry: string = '';
 
   ngOnInit(): void {
     this.loadCountries();
@@ -21,28 +21,8 @@ export class CardComponent implements OnInit {
 
   loadCountries() {
     this.api
-      .getData().subscribe((countries: any) => {
-        this.countriesFromRestApi = countries
-      });
-  }
-
-  onKey(event: any) {
-
-    if(event.target.value.length < 1) {
-      return this.loadCountries();
-    }
-
-    this.country = event.target.value;
-    console.log(this.country)
-
-    this.getCountryInputSearch(this.country)
-  }
-
-
-  getCountryInputSearch(countryParam: string) {
-    this.api.getCountry(countryParam).subscribe((countries: any) => {
-        this.countriesFromRestApi = countries
-        console.log(this.countriesFromRestApi)
+      .getData().subscribe((result: Country[]) => {
+        this.countriesFromRestApi = result
       });
   }
 

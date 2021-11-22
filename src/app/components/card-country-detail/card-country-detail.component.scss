@@ -1,15 +1,23 @@
 .card-img-top {
-    width: 535px;
-    height: 390px;
+	display: inline-block;
+	border-radius: 4px;
+	position: relative;
+	overflow: hidden;
 }
 
-.container {
-    margin-top: 100px;
+.container-detail {
+    overflow: hidden;
+    margin: 51px;
+    padding-right: 10px;
+    position: relative;
 }
 
 .card {
     border: none;
-
+    display: inline-block;
+	position: relative;
+	overflow: hidden;
+    margin-top: 50px;
 }
 
 .chips {
@@ -27,16 +35,50 @@ p {
     margin-bottom: -8px;
 }
 
-@media screen and (max-width: 600px) {
-    .card-img-top {
-        width: auto;
-        height: auto;
-    }
+.input-group {
+    width: 80%;
 }
 
-@media screen and (max-width: 992px) {
-    .card-img-top {
-        width: auto;
-        height: auto;
-    }
-  }
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    border-radius: 0.25rem;
+    background-color: #FFFFFF;
+    border: none;
+    
+}
+
+.btn-light {
+    background-color: #FFFFFF;
+}
+
+.back-button {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 300;
+  justify-content: center;
+  margin: 0;
+  min-height: 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 130px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { Country } from 'src/app/model/country';
 
 
 
@@ -9,12 +10,13 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 export class CountriesService {
 
   constructor(private http: HttpClient) { }
+  countries: Country[] | undefined;
 
   localUrlData = 'https://restcountries.com/v3.1/all';
   
   
   getData() {
-    return this.http.get(this.localUrlData);
+    return this.http.get<Country[]>(this.localUrlData);
   }
 
   
