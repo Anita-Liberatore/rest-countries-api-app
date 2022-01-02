@@ -27,6 +27,6 @@ export class CardComponent implements OnInit {
   }
 
   onPress(i: any) {
-    this.router.navigate(['/prova', {data:JSON.stringify(i)}]);
+    this.router.navigate(['/country', {data:JSON.stringify(i)}]);
   }
 }

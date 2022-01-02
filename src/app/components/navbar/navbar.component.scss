@@ -1,30 +1,48 @@
-.navbar-light .navbar-brand {
-    font-weight: bold;
-    margin-left: 35px;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap');
+
+nav {
+    background: #FFF;
+    padding: 0 0px; 
 }
 
-.navbar-nav {
-   color: black;
-   text-decoration: none;
-   font-size: 15px;
-   font-weight: 700;
-   margin-right: 35px;
-} 
+a {
+    color: #000;
+    text-decoration: none;
+}
 
-.navbar {
-    box-shadow:  inset 0 0em 1em rgb(0 0 0 / 10%), 0 0 0 2px white, 0.3em 0.3em 1em rgb(0 0 0 / 30%);
+.fa-moon {
+    margin: 10px;
+}
+
+.section-nav {
+    padding: 0px 50px;
+    border-bottom: 3px solid #F5F5F5;
+}
+
+.menu {
+  list-style-type: none;
+}
+
+.menu {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 }
 
+.menu li a {
+    display: block;
+    padding: 0px 0px;
+    padding-top: 10px;
+  }
 
-@media all and (max-width: 370px) { 
-    .navbar-light .navbar-brand {
-        font-weight: bold;
-        font-size: initial;
-        margin-left: 10px;
-    }
- }
+.title-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+}
 
- 
+.title-mode {
+    font-weight: 500;
+    color: #000;
+}

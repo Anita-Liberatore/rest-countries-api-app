@@ -13,9 +13,11 @@ export class CardCountryDetailComponent implements OnInit {
 
   elem: any;
   obj: any;
-  population: String = ''
-
-  currenciesValues: String = ''
+  population: string = ''
+  output: string[] = [];
+  languagesOutput: string[] = [];
+  currencies: string = '';
+  languages: string = '';
 
   constructor(private route: ActivatedRoute, private api: CountriesService, private router: Router) { }
 
@@ -24,11 +26,21 @@ export class CardCountryDetailComponent implements OnInit {
     this.obj = JSON.parse(this.elem);
     this.population = this.obj.population.toLocaleString('de-DE');
 
+    Object.keys(this.obj.currencies).map((item) => {
+      this.obj.currencies[item]['name']
+      this.output.push(this.obj.currencies[item]['name']);
+    });
+
+    this.currencies = this.output.join()
+
+    console.log(this.currencies)
+
   }
 
   onBack() {
-      this.router.navigate(['/']);
+    this.router.navigate(['/']);
   }
+  
 }
 
 
