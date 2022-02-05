@@ -22,23 +22,17 @@ export class CardCountryDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private api: CountriesService, private router: Router) { }
 
   ngOnInit(): void {
-    this.elem = this.route.snapshot.paramMap.get("data");
-    this.obj = JSON.parse(this.elem);
-    this.population = this.obj.population.toLocaleString('de-DE');
 
-    Object.keys(this.obj.currencies).map((item) => {
-      this.obj.currencies[item]['name']
-      this.output.push(this.obj.currencies[item]['name']);
-    });
-
-    this.currencies = this.output.join()
-
-    console.log(this.currencies)
-
+  this.getCountryData();
   }
 
   onBack() {
     this.router.navigate(['/']);
+  }
+
+  getCountryData() {
+    const countryFromRoute = this.route.snapshot.paramMap;
+
   }
   
 }

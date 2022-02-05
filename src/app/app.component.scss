@@ -1,10 +1,15 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+/* General CSS */
+:root {
+  
+}
 
-  body {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 16px;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+}

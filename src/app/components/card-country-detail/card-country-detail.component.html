@@ -1,63 +1,31 @@
-<app-navbar></app-navbar>
-<div class="container-detail">
-    <div class="back-button">
-        <div class="input-group">
-            <div class="input-group-text">
-                <i class="fas fa-arrow-left"></i>
-            </div>
-            <button type="button" (click)="onBack()" class="btn btn-light">Back</button>
-        </div>
-    </div>
-    
+<section class="showcase p-5">
+<div class="container grid">
+  <div class="imagine">
+    <img class="card-img-top" src="{{ obj.flags.svg }}" alt="Card image cap" />
+  </div>
+
+  <div class="card">
+      <h4>{{ obj.name }}
+      </h4>
 
     <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <img class="card-img-top" src="{{obj.flags.svg}}" alt="Card image cap">
-            </div>
+      <div class="col-md-6">
+        <div class="section-one">
+          <p class="card-text"><b>Native Name:</b> {{ obj.name }}</p>
+          <p class="card-text"><b>Population:</b> {{ obj.population }}</p>
+          <p class="card-text"><b>Region:</b> {{ obj.region }}</p>
+          <p class="card-text"><b>Sub Region:</b> {{ obj.subregion }}</p>
+          <p class="card-text"><b>Capital:</b> {{ obj.capital }}</p>
         </div>
-
-        <div class="col-md-6">
-            <div class="card">
-                <div>
-                    <h4><b>{{obj.name.common != null ? obj.name.common : obj.name}}</b></h4>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <p class="card-text"><b>Native Name:</b> {{obj.name.official}} </p>
-                        <p class="card-text"><b>Population:</b> {{population}}</p>
-                        <p class="card-text"><b>Region:</b> {{obj.region}} </p>
-                        <p class="card-text"><b>Sub Region:</b> {{obj.subregion}} </p>
-                        <p class="card-text"><b>Capital:</b> {{obj.capital}}</p>
-                    </div>
-
-                    <div class="col-md-6">
-                        <p class="card-text"><b>Top Level Domain:</b> {{obj.tld}} </p>
-                        <p class="card-text"><b>Currencies:</b> {{currencies}}</p>
-                        <p class="card-text"><b>Languages:</b> {{languages}} </p>
-                    </div>
-                </div>
-
-                <!--<div class="chips">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <b>Border Countries:</b>
-                        </div>
-
-                        <div class="col-md-6">
-                            <span class="badge bg-light text-dark">prova</span>
-                            <span class="badge bg-light text-dark">prova</span>
-                            <span class="badge bg-light text-dark">prova</span>
-                            <span class="badge bg-light text-dark">prova</span>
-                        </div>
-                    </div>
-                </div>
-            -->
-            </div>
+      </div>
+      <div class="col-md-6">
+        <div class="section-two">
+          <p class="card-text"><b>Top Level Domain:</b> {{ obj.tld }}</p>
+          <p class="card-text"><b>Currencies:</b> {{ currencies }}</p>
+          <p class="card-text"><b>Languages:</b> {{ languages }}</p>
         </div>
-
-
-
+      </div>
     </div>
+  </div>
 </div>
+</section>

@@ -1,36 +1,37 @@
-<app-navbar></app-navbar>
 
-<!--<div class="container-card">
-    <div class="row">
-        <div class="col-md-3">
-            <div class="search-button">
-                <div class="input-group">
-                    <div class="input-group-text">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <input type="text" class="form-control" [(ngModel)]="searchCountry"
-                        placeholder="Search for a country...">
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container">
+  <div
+    class="cards-wrapper-dark d-flex flex-wrap align-items-center justify-content-around"
+  >
+    <ng-container *ngFor="let item of countriesFromRestApi">
 
-    <div class="card" *ngFor="let country of countriesFromRestApi | filter:searchCountry">
-        <div class="card-img" style="background-image:url({{country.flags.png}});">
-            <div class="overlay">
-                <div class="overlay-content">
-                    <a class="hover" (click)="onPress(country)">View Country</a>
-                </div>
-            </div>
+        <div
+          class="card"
+          style="width: 15rem;"
+          [routerLink]="['country/', item]"
+        >
+          <div class="img-container">
+            <img
+              class="card-img-top"
+              src="{{ item.flags.svg }}"
+              alt="Card image cap"
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ item.name.common }}</h5>
+          </div>
+          <ul class="list-property"> 
+            <li class="item">
+              <strong>Population : </strong><span>{{ item.population }}</span>
+            </li>
+            <li class="item">
+              <strong>Region : </strong> <span>{{ item.region }}</span>
+            </li>
+            <li class="item">
+              <strong>Captial : </strong> <span>{{ item.capital }}</span>
+            </li>
+          </ul>
         </div>
-
-        <div class="card-content">
-            <a href="#!">
-                <h6 class="title-country">{{country.name.common}}</h6>
-                <p class="p-item"><b>Population:</b> {{country.population | number: '.2'}}</p>
-                <p class="p-item"><b>Region:</b> {{country.region}}</p>
-                <p class="p-item"><b>Capital:</b> {{country.capital}}</p>
-            </a>
-        </div>
-    </div>
-</div>-->
+    </ng-container>
+  </div>
+</div>

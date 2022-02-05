@@ -21,7 +21,7 @@ export class CountriesService {
 
   
   getCountry(country: string) {
-    return this.http.get(`https://restcountries.com/v2/name/${country}`);
+    return this.http.get<Country[]>(`https://restcountries.com/v2/name/${country}`);
   }
 
 }

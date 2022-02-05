@@ -1,23 +1,3 @@
-* {
-	box-sizing: border-box;
-}
-
-html, body {
-	width: 100%;
-	height: 100%;
-}
-
-body {
-	padding: 1rem 0;
-	background: #f9f9fb;
-	background-color: #cbcbcc;
-}
-.container-card {
-  overflow: hidden;
-  margin: 100px 0px 0px 100px;
-  padding-right: 10px;
-  position: relative;
-}
 
 .card {
 	width: 250px;
@@ -29,6 +9,11 @@ body {
 	background: #fff;
 	position: relative;
 	overflow: hidden;
+	
+	li {
+		list-style-type: none;
+	}
+
 	
 	&:hover, &.hover {
 		transform: translateY(-4px);
@@ -89,6 +74,12 @@ body {
 				}
 			}
 		}
+	}
+
+	&-img-top {
+		width: 100%;
+		height: 14vh;
+		object-fit: cover;
 	}
 	
 	&-content {

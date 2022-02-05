@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap');
 
+.section-one {
+    box-shadow: 0 2px 3px -2px rgba(0,0,0,.2);
+}
+
 nav {
     background: #FFF;
     padding: 0 0px; 
+    
 }
 
 a {
@@ -12,11 +17,6 @@ a {
 
 .fa-moon {
     margin: 10px;
-}
-
-.section-nav {
-    padding: 0px 50px;
-    border-bottom: 3px solid #F5F5F5;
 }
 
 .menu {
